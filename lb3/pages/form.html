@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Демонстрація форми</title>
+</head>
+<body>
+
+    <h1>Форма з Персональною Інформацією</h1>
+
+      <!--form вказує на початок форми. 
+        Атрибути "action" та "method" потрібні для обробки даних форми. # - дані заповнення нікуди не перенаправляються-->
+    <form action="#" method="post">
+      
+        <!--Тег <fieldset> групує елементи форми-->
+        <fieldset>
+            
+            <!--Тег <legend> визначає заголовок групи (fieldset)-->
+            <legend>Персональна Інформація</legend>
+            
+            <!--Тег <lable> використовується для створення міток або підписів для елементів форми
+                Атрибут for вказує на те, яке поле вводу пов'язано з цією міткою-->
+            <label for="name">Ваше ім'я:</label>
+
+           <!--Атрибут "type" визначає тип поля вводу, "required" вказує на обов'язковість заповнення-->
+            <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+
+            <br>
+            <br>
+
+            <label for="age">Ваш вік:</label>
+            <input type="number" id="age" name="age" placeholder="Введіть ваш вік" required>
+        </fieldset>
+            <br>
+
+            <label for="password">Ваш пароль:</label>
+            <input type="password" id="password" name="password" placeholder="Введіть ваш пароль" required>
+
+            <br>
+
+            <!--radio вказує що це радіокнопка. 
+            Всі радіокнопки, які належать до однієї групи, повинні мати однаковий атрибут name,
+            щоб браузер зрозумів, що вони належать до однієї групи вибору-->
+
+            <label>Ваша стать:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Я чоловік</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Я жінка</label>
+
+            <br>
+
+            <!--checkbox вказує на кнопку чекбоксу (квадратна кнопка з прапорцем)-->
+            <label>
+                <input type="checkbox" name="remember"> Запам'ятати мене
+            </label>
+
+            <br>
+
+            <!--dropdown вказує на випадаючий список, серед якого потрібно обрати одне місто-->
+            <label for="dropdown">Оберіть ваше місто:</label>
+            <select id="city" name="city">
+                <option value="kyiv">Київ</option>
+                <option value="odesa">Одеса</option>
+                <option value="zhytomyr">Житомир</option>
+                <option value="kharkiv">Харків</option>
+                <option value="lviv">Львів</option>
+            </select>
+
+            <br>
+
+            <!--textarea створює поле для введення багаторядкового тексту
+            rows вказує на кількість видимих рядків введеного тексту-->
+            <label for="message">Введіть ваше повідомлення:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Введіть ваше повідомлення"></textarea>
+
+            <br>
+
+            <!--Тег <input> з типом "submit" створює кнопку для відправлення форми-->
+            <input type="submit" value="Підтвердити">
+            
+       
+    </form>
+
+    <p><a href="../index.html">Повернутися на головну сторінку</a></p>
+    
+</body>
+</html>
